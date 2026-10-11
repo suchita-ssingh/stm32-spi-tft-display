@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-st-nucleo-c031c6",
+      "id": "nucleo",
+      "top": -8.77,
+      "left": -144.98,
+      "attrs": {}
+    },
+    { "type": "wokwi-ili9341", "id": "lcd1", "top": -47.2, "left": 182.1, "attrs": {} }
+  ],
+  "connections": [
+    [ "$serialMonitor:TX", "nucleo:PA3", "", [] ],
+    [ "$serialMonitor:RX", "nucleo:PA2", "", [] ],
+    [ "nucleo:D12", "lcd1:MISO", "green", [ "h-11.95", "v-105.6", "h96", "v211.2", "h144" ] ],
+    [ "nucleo:D13", "lcd1:SCK", "green", [ "h7.25", "v-86.4", "h57.6", "v220.8", "h144" ] ],
+    [ "nucleo:D11", "lcd1:MOSI", "green", [ "h16.85", "v-96", "h38.4", "v182.4", "h144" ] ],
+    [ "nucleo:D2", "lcd1:D/C", "green", [ "h16.85", "v76.8", "h172.8", "v-19.2" ] ],
+    [ "nucleo:D3", "lcd1:CS", "green", [ "h45.65", "v57.6", "h115.2" ] ]
+  ],
+  "dependencies": {}
+}
